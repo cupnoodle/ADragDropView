@@ -22,7 +22,7 @@ public class ADragDropView: NSView {
     
     weak var delegate: ADragDropViewDelegate?
     
-    required public init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         
         if #available(OSX 10.13, *) {
@@ -34,7 +34,7 @@ public class ADragDropView: NSView {
         
     }
     
-    override public func draw(_ dirtyRect: NSRect) {
+    public override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
         // Drawing code here.
@@ -84,23 +84,23 @@ public class ADragDropView: NSView {
     }
     
     // MARK: - NSDraggingDestination
-    override public func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
+    public override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
         highlight = true
         fileTypeIsOk = isExtensionAcceptable(draggingInfo: sender)
         self.setNeedsDisplay(self.bounds)
         return []
     }
     
-    override public func draggingExited(_ sender: NSDraggingInfo?) {
+    public override func draggingExited(_ sender: NSDraggingInfo?) {
         highlight = false
         self.setNeedsDisplay(self.bounds)
     }
     
-    override public func draggingUpdated(_ sender: NSDraggingInfo) -> NSDragOperation {
+    public override func draggingUpdated(_ sender: NSDraggingInfo) -> NSDragOperation {
         return fileTypeIsOk ? .copy : []
     }
     
-    override public func prepareForDragOperation(_ sender: NSDraggingInfo) -> Bool {
+    public override func prepareForDragOperation(_ sender: NSDraggingInfo) -> Bool {
         // finished with dragging so remove any highlighting
         highlight = false
         self.setNeedsDisplay(self.bounds)
@@ -108,7 +108,7 @@ public class ADragDropView: NSView {
         return true
     }
     
-    override public func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
+    public override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
         if sender.filePathURLs.count == 0 {
             return false
         }
@@ -142,7 +142,7 @@ public class ADragDropView: NSView {
         return true
     }
     
-    override public func acceptsFirstMouse(for event: NSEvent?) -> Bool {
+    public override func acceptsFirstMouse(for event: NSEvent?) -> Bool {
         return true
     }
     
