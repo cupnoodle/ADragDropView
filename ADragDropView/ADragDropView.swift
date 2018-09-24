@@ -20,7 +20,7 @@ public final class ADragDropView: NSView {
     /// Allowed file type extensions to drop, eg: ["png", "jpg", "jpeg"]
     var acceptedFileExtensions : [String] = []
     
-    weak var delegate: ADragDropViewDelegate?
+    public weak var delegate: ADragDropViewDelegate?
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -148,7 +148,7 @@ public final class ADragDropView: NSView {
     
 }
 
-protocol ADragDropViewDelegate: class {
+public protocol ADragDropViewDelegate: class {
     func dragDropView(_ dragDropView: ADragDropView, droppedFileWithURL  URL: URL)
     func dragDropView(_ dragDropView: ADragDropView, droppedFilesWithURLs URLs: [URL])
 }
