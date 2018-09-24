@@ -11,6 +11,8 @@
 		7106386F215939A80072C164 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106386E215939A80072C164 /* ViewController.swift */; };
 		71063871215939A80072C164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71063870215939A80072C164 /* Assets.xcassets */; };
 		71063874215939A80072C164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71063872215939A80072C164 /* Main.storyboard */; };
+		7106387E21593EB00072C164 /* ADragDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106387D21593EB00072C164 /* ADragDropView.swift */; };
+		7106388021593F5B0072C164 /* NSDraggingInfo+FilePathURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106387F21593F5B0072C164 /* NSDraggingInfo+FilePathURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		71063873215939A80072C164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71063875215939A80072C164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71063876215939A80072C164 /* ADragDropViewExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ADragDropViewExample.entitlements; sourceTree = "<group>"; };
+		7106387D21593EB00072C164 /* ADragDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADragDropView.swift; sourceTree = "<group>"; };
+		7106387F21593F5B0072C164 /* NSDraggingInfo+FilePathURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDraggingInfo+FilePathURL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 		7106387C215939AD0072C164 /* ADragDropView */ = {
 			isa = PBXGroup;
 			children = (
+				7106387D21593EB00072C164 /* ADragDropView.swift */,
+				7106387F21593F5B0072C164 /* NSDraggingInfo+FilePathURL.swift */,
 			);
 			path = ADragDropView;
 			sourceTree = "<group>";
@@ -141,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7106388021593F5B0072C164 /* NSDraggingInfo+FilePathURL.swift in Sources */,
 				7106386F215939A80072C164 /* ViewController.swift in Sources */,
+				7106387E21593EB00072C164 /* ADragDropView.swift in Sources */,
 				7106386D215939A80072C164 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
