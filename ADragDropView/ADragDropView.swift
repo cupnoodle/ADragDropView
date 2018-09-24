@@ -8,7 +8,7 @@
 
 import Cocoa
 
-public class ADragDropView: NSView {
+public final class ADragDropView: NSView {
     
     // highlight the drop zone when mouse drag enters the drop view
     fileprivate var highlight : Bool = false
