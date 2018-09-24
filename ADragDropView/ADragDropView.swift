@@ -10,11 +10,14 @@ import Cocoa
 
 class ADragDropView: NSView {
     
-    //highlight the drop zone
+    // highlight the drop zone when mouse drag enters the drop view
     fileprivate var highlight : Bool = false
     
-    // check for allowed file type
+    // check if the dropped file type is accepted
     fileprivate var fileTypeIsOk = false
+    
+    
+    /// Allowed file type extensions to drop, eg: ["png", "jpg", "jpeg"]
     var acceptedFileExtensions : [String] = []
     
     weak var delegate: ADragDropViewDelegate?
