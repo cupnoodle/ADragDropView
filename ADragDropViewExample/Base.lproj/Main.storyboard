@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ADragDropViewExample" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -688,7 +689,8 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-			<connections>
+                        <value key="minSize" type="size" width="250" height="270"/>
+                        <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
@@ -703,11 +705,49 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ADragDropViewExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="9eD-4K-MtR" customClass="ADragDropView" customModule="ADragDropViewExample" customModuleProvider="target">
+                                <rect key="frame" x="165" y="100" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="0yS-n5-99i"/>
+                                    <constraint firstAttribute="width" constant="150" id="D3W-7i-wRY"/>
+                                </constraints>
+                            </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JFE-yv-GzV">
+                                <rect key="frame" x="173" y="74" width="135" height="18"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop image file here" id="IGL-pP-5hy">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6El-pz-tDF">
+                                <rect key="frame" x="215" y="16" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="D34-34-UKl"/>
+                                    <constraint firstAttribute="height" constant="50" id="Nkg-sQ-scA"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="STk-iw-0uj"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6El-pz-tDF" firstAttribute="top" secondItem="JFE-yv-GzV" secondAttribute="bottom" constant="8" id="8Hu-Px-nDh"/>
+                            <constraint firstItem="JFE-yv-GzV" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="9fx-ze-ysT"/>
+                            <constraint firstItem="6El-pz-tDF" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Jb4-zu-y7n"/>
+                            <constraint firstItem="9eD-4K-MtR" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="MzM-r0-Pnl"/>
+                            <constraint firstItem="JFE-yv-GzV" firstAttribute="top" secondItem="9eD-4K-MtR" secondAttribute="bottom" constant="8" id="SKs-5r-wM7"/>
+                            <constraint firstItem="9eD-4K-MtR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="geh-gj-zyL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dragDropView" destination="9eD-4K-MtR" id="pEO-U0-ihI"/>
+                        <outlet property="filenameLabel" destination="JFE-yv-GzV" id="VFG-eL-ONg"/>
+                        <outlet property="imageView" destination="6El-pz-tDF" id="to3-7M-Vfy"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

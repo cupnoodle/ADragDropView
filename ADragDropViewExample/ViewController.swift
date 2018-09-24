@@ -10,10 +10,18 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var dragDropView: ADragDropView!
+    @IBOutlet weak var filenameLabel: NSTextField!
+    @IBOutlet weak var imageView: NSImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        dragDropView.acceptedFileExtensions = ["png", "jpg", "jpeg", "gif"]
+        dragDropView.delegate = self
+        
     }
 
     override var representedObject: Any? {
@@ -22,6 +30,21 @@ class ViewController: NSViewController {
         }
     }
 
-
 }
 
+extension ViewController: ADragDropViewDelegate {
+    func dragDropView(_ dragDropView: ADragDropView, droppedFileWithURL URL: URL) {
+        
+        filenameLabel.stringValue = URL.absoluteString
+        imageView.image = NSImage(byReferencing: URL)
+    }
+    
+    func dragDropView(_ dragDropView: ADragDropView, droppedFilesWithURLs URLs: [URL]) {
+        
+        let alert = NSAlert()
+        alert.alertStyle = .warning
+        alert.messageText = "Please drop only one file"
+        alert.addButton(withTitle: "OK")
+        alert.runModal()
+    }
+}
