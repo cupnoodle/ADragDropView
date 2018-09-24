@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ADragDropView"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Add a Drag and drop view (swift) for your macOS app easily"
   s.description  = <<-DESC
   Add a file drag and drop view (swift) to your macOS app easily, works with sandboxed app as well
