@@ -33,6 +33,16 @@ pod 'ADragDropView'
 
 
 
+On the top of view controller, add
+
+```swift
+import ADragDropView
+```
+
+
+
+
+
 ## Usage
 
 *Run the `ADragDropViewExample` target in Xcode to try the demo.*
