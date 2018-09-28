@@ -18,7 +18,7 @@ public final class ADragDropView: NSView {
     
     
     /// Allowed file type extensions to drop, eg: ["png", "jpg", "jpeg"]
-    var acceptedFileExtensions : [String] = []
+    public var acceptedFileExtensions : [String] = []
     
     public weak var delegate: ADragDropViewDelegate?
     
