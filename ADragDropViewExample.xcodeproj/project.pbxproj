@@ -13,7 +13,20 @@
 		71063874215939A80072C164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71063872215939A80072C164 /* Main.storyboard */; };
 		7106387E21593EB00072C164 /* ADragDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106387D21593EB00072C164 /* ADragDropView.swift */; };
 		7106388021593F5B0072C164 /* NSDraggingInfo+FilePathURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106387F21593F5B0072C164 /* NSDraggingInfo+FilePathURL.swift */; };
+		71F98981215E22CD00557E59 /* ADragDropViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F98980215E22CD00557E59 /* ADragDropViewTests.swift */; };
+		71F9898A215E246C00557E59 /* ADragDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106387D21593EB00072C164 /* ADragDropView.swift */; };
+		71F9898B215E246F00557E59 /* NSDraggingInfo+FilePathURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7106387F21593F5B0072C164 /* NSDraggingInfo+FilePathURL.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71F98983215E22CD00557E59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71063861215939A80072C164 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71063868215939A80072C164;
+			remoteInfo = ADragDropViewExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		71063869215939A80072C164 /* ADragDropViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADragDropViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,10 +38,20 @@
 		71063876215939A80072C164 /* ADragDropViewExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ADragDropViewExample.entitlements; sourceTree = "<group>"; };
 		7106387D21593EB00072C164 /* ADragDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADragDropView.swift; sourceTree = "<group>"; };
 		7106387F21593F5B0072C164 /* NSDraggingInfo+FilePathURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDraggingInfo+FilePathURL.swift"; sourceTree = "<group>"; };
+		71F9897E215E22CD00557E59 /* ADragDropViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADragDropViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71F98980215E22CD00557E59 /* ADragDropViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADragDropViewTests.swift; sourceTree = "<group>"; };
+		71F98982215E22CD00557E59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		71063866215939A80072C164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71F9897B215E22CD00557E59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +66,7 @@
 			children = (
 				7106387C215939AD0072C164 /* ADragDropView */,
 				7106386B215939A80072C164 /* ADragDropViewExample */,
+				71F9897F215E22CD00557E59 /* ADragDropViewTests */,
 				7106386A215939A80072C164 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				71063869215939A80072C164 /* ADragDropViewExample.app */,
+				71F9897E215E22CD00557E59 /* ADragDropViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +102,15 @@
 			path = ADragDropView;
 			sourceTree = "<group>";
 		};
+		71F9897F215E22CD00557E59 /* ADragDropViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				71F98980215E22CD00557E59 /* ADragDropViewTests.swift */,
+				71F98982215E22CD00557E59 /* Info.plist */,
+			);
+			path = ADragDropViewTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,6 +131,24 @@
 			productReference = 71063869215939A80072C164 /* ADragDropViewExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		71F9897D215E22CD00557E59 /* ADragDropViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71F98987215E22CD00557E59 /* Build configuration list for PBXNativeTarget "ADragDropViewTests" */;
+			buildPhases = (
+				71F9897A215E22CD00557E59 /* Sources */,
+				71F9897B215E22CD00557E59 /* Frameworks */,
+				71F9897C215E22CD00557E59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71F98984215E22CD00557E59 /* PBXTargetDependency */,
+			);
+			name = ADragDropViewTests;
+			productName = ADragDropViewTests;
+			productReference = 71F9897E215E22CD00557E59 /* ADragDropViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -108,6 +160,9 @@
 				ORGANIZATIONNAME = fluffy;
 				TargetAttributes = {
 					71063868215939A80072C164 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					71F9897D215E22CD00557E59 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -126,6 +181,7 @@
 			projectRoot = "";
 			targets = (
 				71063868215939A80072C164 /* ADragDropViewExample */,
+				71F9897D215E22CD00557E59 /* ADragDropViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +193,13 @@
 			files = (
 				71063871215939A80072C164 /* Assets.xcassets in Resources */,
 				71063874215939A80072C164 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71F9897C215E22CD00557E59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +217,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		71F9897A215E22CD00557E59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71F98981215E22CD00557E59 /* ADragDropViewTests.swift in Sources */,
+				71F9898A215E246C00557E59 /* ADragDropView.swift in Sources */,
+				71F9898B215E246F00557E59 /* NSDraggingInfo+FilePathURL.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71F98984215E22CD00557E59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71063868215939A80072C164 /* ADragDropViewExample */;
+			targetProxy = 71F98983215E22CD00557E59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		71063872215939A80072C164 /* Main.storyboard */ = {
@@ -319,6 +400,40 @@
 			};
 			name = Release;
 		};
+		71F98985215E22CD00557E59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ADragDropViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.fluffy.ADragDropViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		71F98986215E22CD00557E59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ADragDropViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.fluffy.ADragDropViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +451,15 @@
 			buildConfigurations = (
 				7106387A215939A80072C164 /* Debug */,
 				7106387B215939A80072C164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71F98987215E22CD00557E59 /* Build configuration list for PBXNativeTarget "ADragDropViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71F98985215E22CD00557E59 /* Debug */,
+				71F98986215E22CD00557E59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
