@@ -31,7 +31,10 @@ public final class ADragDropView: NSView {
             // Fallback on earlier versions
             registerForDraggedTypes([NSPasteboard.PasteboardType("NSFilenamesPboardType")])
         }
-        
+    }
+    
+    public override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
     }
     
     public override func draw(_ dirtyRect: NSRect) {
@@ -87,6 +90,7 @@ public final class ADragDropView: NSView {
     public override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
         highlight = true
         fileTypeIsOk = isExtensionAcceptable(draggingInfo: sender)
+        
         self.setNeedsDisplay(self.bounds)
         return []
     }
