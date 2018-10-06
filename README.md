@@ -1,5 +1,8 @@
 # ADragDropView
 
+[![Build Status](https://travis-ci.org/cupnoodle/ADragDropView.svg?branch=master)](https://travis-ci.org/cupnoodle/ADragDropView)
+  
+  
 > Add a Drag and drop view (swift) for your macOS app easily
 
 I used this in my mac app, [PDF Page Number + Watermark](https://pdfpagenumber.com)
