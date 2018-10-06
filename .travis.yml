@@ -1,0 +1,5 @@
+language: swift
+os: osx
+
+xcode_project: ADragDropViewExample.xcodeproj
+xcode_scheme: ADragDropViewExample
